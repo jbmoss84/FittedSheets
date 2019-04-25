@@ -136,9 +136,12 @@ public class SheetViewController: UIViewController {
         super.viewWillAppear(animated)
         UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: { [weak self] in
             guard let self = self else { return }
-//            self.view.backgroundColor = self.overlayColor
             self.containerView.transform = CGAffineTransform.identity
             self.actualContainerSize = .fixed(self.containerView.frame.height)
+        }, completion: nil)
+        
+        self.transitionCoordinator?.animateAlongsideTransition(in: self, animation: { (_) in
+            self.view.backgroundColor = self.overlayColor
         }, completion: nil)
     }
     
