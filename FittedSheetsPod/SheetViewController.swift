@@ -134,12 +134,12 @@ public class SheetViewController: UIViewController {
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: { [weak self] in
-            guard let self = self else { return }
-            self.view.backgroundColor = self.overlayColor
-            self.containerView.transform = CGAffineTransform.identity
-            self.actualContainerSize = .fixed(self.containerView.frame.height)
-        }, completion: nil)
+//        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: { [weak self] in
+//            guard let self = self else { return }
+//            self.view.backgroundColor = self.overlayColor
+//            self.containerView.transform = CGAffineTransform.identity
+//            self.actualContainerSize = .fixed(self.containerView.frame.height)
+//        }, completion: nil)
     }
     
     /// Change the sizes the sheet should try to pin to
