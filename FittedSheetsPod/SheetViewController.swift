@@ -140,7 +140,7 @@ public class SheetViewController: UIViewController {
             self.actualContainerSize = .fixed(self.containerView.frame.height)
         }, completion: nil)
         
-        self.transitionCoordinator?.animateAlongsideTransition(in: self, animation: { (_) in
+        self.transitionCoordinator?.animateAlongsideTransition(in: self.view, animation: { (_) in
             self.view.backgroundColor = self.overlayColor
         }, completion: nil)
     }
