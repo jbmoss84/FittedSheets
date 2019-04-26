@@ -139,10 +139,18 @@ public class SheetViewController: UIViewController {
             self.containerView.transform = CGAffineTransform.identity
             self.actualContainerSize = .fixed(self.containerView.frame.height)
         }, completion: nil)
-        
-        self.transitionCoordinator?.animateAlongsideTransition(in: self.view, animation: { (_) in
+    }
+    
+    override public func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.25) {
             self.view.backgroundColor = self.overlayColor
-        }, completion: nil)
+        }
+    }
+    
+    override public func viewWillDisappear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.15) {
+            self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
+        }
     }
     
     /// Change the sizes the sheet should try to pin to
