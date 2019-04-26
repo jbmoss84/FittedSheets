@@ -140,7 +140,7 @@ public class SheetViewController: UIViewController {
             self.actualContainerSize = .fixed(self.containerView.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.15, delay: 0.2, options: [.curveEaseOut], animations: {
+        UIView.animate(withDuration: 0.15, delay: 0.3, options: [.curveEaseOut], animations: {
             self.view.backgroundColor = self.overlayColor
         }, completion: nil)
     }
