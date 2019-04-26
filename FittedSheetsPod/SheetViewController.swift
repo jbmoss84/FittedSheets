@@ -139,12 +139,10 @@ public class SheetViewController: UIViewController {
             self.containerView.transform = CGAffineTransform.identity
             self.actualContainerSize = .fixed(self.containerView.frame.height)
         }, completion: nil)
-    }
-    
-    override public func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.25) {
+        
+        UIView.animate(withDuration: 0.15, delay: 0.35, options: [.curveEaseOut], animations: {
             self.view.backgroundColor = self.overlayColor
-        }
+        }, completion: nil)
     }
     
     override public func viewWillDisappear(_ animated: Bool) {
